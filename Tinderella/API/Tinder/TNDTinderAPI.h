@@ -16,4 +16,6 @@
 - (TNDPromise<NSString *> *) authenticate;
 - (TNDPromise<NSArray<TNDUser *> *> *) recommendations;
 - (TNDPromise<TNDUser *> *) userByID:(NSString *)id;
+- (TNDPromise *) like:(TNDUser *)user;
+- (TNDPromise *) pass:(TNDUser *)user;
 @end

@@ -21,6 +21,7 @@
 @synthesize photos = _photos;
 @synthesize age = _age;
 @synthesize distance = _distance;
+@synthesize matchState = _matchState;
 
 + (instancetype) userWithApi:(TNDTinderAPI *)api data:(NSDictionary *)data
 {
@@ -103,5 +104,21 @@
 	return _photos ? : (_photos = [_data[@"photos"] bk_map:^id(NSDictionary *obj) {
 		return [TNDDefferedImage imageWithUrl:obj[@"url"]];
 	}]);
+}
+
+#pragma mark Actions
+
+- (TNDPromise<NSNumber *> *) like
+{
+	return [_api like:self].then(^(NSNumber *res) {
+		_matchState = (TNDUserMatchState) res.integerValue;
+	});
+}
+
+- (TNDPromise<NSNumber *> *) dislike
+{
+	return [_api pass:self].then(^{
+		_matchState = TNDUserMatchStateDisliked;
+	});
 }
 @end

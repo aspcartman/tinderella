@@ -25,7 +25,7 @@ typedef NS_ENUM(NSUInteger, TNDUserMatchState)
 @property (nonatomic, readonly) NSArray<NSString *>         *jobs;
 @property (nonatomic, readonly) NSArray<NSString *>         *schools;
 @property (nonatomic, readonly) NSArray<TNDDefferedImage *> *photos;
-@property (nonatomic, readonly) BOOL                        matchState;
+@property (nonatomic, readonly) TNDUserMatchState           matchState;
 
 - (TNDPromise<NSNumber *> *) like;
 - (TNDPromise<NSNumber *> *) dislike;

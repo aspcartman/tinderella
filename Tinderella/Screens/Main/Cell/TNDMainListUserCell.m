@@ -26,6 +26,7 @@
 {
 	self = [super init];
 	if (self) {
+		self.wantsLayer = YES;
 
 		TNDDefferedImageView *photo = [TNDDefferedImageView new];
 		[self addSubview:photo];
@@ -136,7 +137,23 @@
 	_photoSmall2.defferedImage = photos.count > 2 ? photos[2] : nil;
 	_photoSmall3.defferedImage = photos.count > 3 ? photos[3] : nil;
 	_photoSmall4.defferedImage = photos.count > 4 ? photos[4] : nil;
+
+	switch (user.matchState) {
+		case TNDUserMatchStateNone:
+			self.layer.backgroundColor = nil;
+			break;
+		case TNDUserMatchStateDisliked:
+			self.layer.backgroundColor = [[NSColor redColor] colorWithAlphaComponent:0.1].CGColor;
+			break;
+		case TNDUserMatchStateLiked:
+			self.layer.backgroundColor = [[NSColor blueColor] colorWithAlphaComponent:0.1].CGColor;
+			break;
+		case TNDUserMatchStateMatched:
+			self.layer.backgroundColor = [[NSColor greenColor] colorWithAlphaComponent:0.1].CGColor;
+			break;
+	}
 }
+
 
 - (void) prepareForReuse
 {

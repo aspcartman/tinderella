@@ -14,7 +14,7 @@
 @end
 
 @protocol TNDMainListViewDelegate
-- (void) mainListView:(TNDMainListView *)view didSelectUser:(TNDUser *)user;
+- (void) mainListView:(TNDMainListView *)view didSelectUser:(TNDUser *)user atRow:(NSUInteger)row;
 - (void) mainListViewApproachingEndOfData:(TNDMainListView *)view;
 @end
 
@@ -22,5 +22,6 @@
 @property (nonatomic, weak) id <TNDMainListViewDataSource> dataSource;
 @property (nonatomic, weak) id <TNDMainListViewDelegate>   delegate;
 @property (nonatomic) BOOL                                 loading;
-- (void) reload;
+- (void) updateForMoreUsers;
+- (void) reloadUserAtRow:(NSUInteger)row;
 @end

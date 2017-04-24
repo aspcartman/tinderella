@@ -9,7 +9,6 @@
 #import "TNDFacebookAPI.h"
 #import "NSError+TNDError.h"
 #import "TNDTinderUser.h"
-#import "TNDUser.h"
 
 @implementation TNDTinderAPI
 {
@@ -78,6 +77,26 @@
 		return [self request:@"GET" path:[NSString stringWithFormat:@"/user/%@", id] parameters:nil];
 	}).then(^(NSDictionary *res) {
 		return [TNDTinderUser userWithApi:self data:res];
+	});
+}
+
+- (TNDPromise<NSNumber *> *) like:(TNDUser *)user
+{
+	return [self authenticate].then(^{
+		return [self request:@"GET" path:[NSString stringWithFormat:@"/like/%@", user.id] parameters:nil];
+	}).then(^(NSDictionary *resp) {
+		NSLog(@"%@", resp);
+		NSNumber *result = [resp[@"match"] isKindOfClass:[NSDictionary class]] ? @(TNDUserMatchStateMatched) : @(TNDUserMatchStateLiked);
+		return result;
+	});
+}
+
+- (TNDPromise *) pass:(TNDUser *)user
+{
+	return [self authenticate].then(^{
+		return [self request:@"GET" path:[NSString stringWithFormat:@"/pass/%@", user.id] parameters:nil];
+	}).then(^(NSDictionary *resp) {
+		NSLog(@"%@", resp);
 	});
 }
 

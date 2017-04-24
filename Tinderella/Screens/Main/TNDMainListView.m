@@ -56,6 +56,16 @@
 	_scrollView.frame = self.bounds;
 }
 
+- (void) updateForMoreUsers
+{
+	[_tableView noteNumberOfRowsChanged];
+}
+
+- (void) reloadUserAtRow:(NSUInteger)row
+{
+	[_tableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:row] columnIndexes:[NSIndexSet indexSetWithIndex:0]];
+}
+
 #pragma mark TableView
 
 - (NSInteger) numberOfRowsInTableView:(NSTableView *)tableView
@@ -80,17 +90,18 @@
 
 - (CGFloat) tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
 {
-	return 200;
+	return 300;
 }
 
 - (BOOL) tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row
 {
-	[_delegate mainListView:self didSelectUser:[_dataSource mainListView:self userAtRow:(NSUInteger) row]];
-	return YES;
+	[_delegate mainListView:self didSelectUser:[_dataSource mainListView:self userAtRow:(NSUInteger) row] atRow:(NSUInteger) row];
+	return NO;
 }
 
-- (void) reload
+
+- (void) updateOnClassInjection
 {
-	[_tableView noteNumberOfRowsChanged];
+	[_tableView reloadData];
 }
 @end

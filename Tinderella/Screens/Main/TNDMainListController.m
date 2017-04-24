@@ -59,7 +59,7 @@ VIEW_PROPERTY(TNDMainListView*);
 	self.loadingMore = YES;
 	[_tinderAPI recommendations].then(^(NSArray *recommendations) {
 		[self appendRecommendations:recommendations];
-		[self.view reload];
+		[self.view updateForMoreUsers];
 	}).catch(^(NSError *error) {
 		NSLog(@"Failed getting recommendations: %@", error);
 	}).always(^{
@@ -99,10 +99,10 @@ VIEW_PROPERTY(TNDMainListView*);
 	return _feed[row];
 }
 
-- (void) mainListView:(TNDMainListView *)view didSelectUser:(TNDUser *)user
+- (void) mainListView:(TNDMainListView *)view didSelectUser:(TNDUser *)user atRow:(NSUInteger)row
 {
-	[user like].then(^() {
-	}).always(^() {
+	(user.matchState != TNDUserMatchStateLiked ? [user like] : [user dislike]).always(^() {
+		[self.view reloadUserAtRow:row];
 	});
 }
 
