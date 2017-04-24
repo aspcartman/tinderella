@@ -22,6 +22,7 @@
 @synthesize age = _age;
 @synthesize distance = _distance;
 @synthesize matchState = _matchState;
+@synthesize birthdate = _birthdate;
 
 + (instancetype) userWithApi:(TNDTinderAPI *)api data:(NSDictionary *)data
 {
@@ -34,6 +35,20 @@
 	if (self) {
 		_api  = api;
 		_data = data;
+
+		_id             = _data[@"_id"];
+		_name           = _data[@"name"];
+		_bio            = _data[@"bio"];
+		_birthdate      = _data[@"birth_date"] ? [NSDate dateFromString:_data[@"birth_date"] withFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"] : nil;
+		if (_birthdate) {
+			NSTimeInterval seconds = [[NSDate date] timeIntervalSinceDate:_birthdate];
+			_age                   = @((NSInteger) (seconds / (60 * 60 * 24 * 365)));
+		}
+		NSNumber *miles = _data[@"distance_mi"];
+		_distance = miles ? @((NSInteger) (miles.floatValue * 1.6)) : nil;
+		_photos   = [_data[@"photos"] bk_map:^id(NSDictionary *obj) {
+			return [TNDRemoteImage imageWithUrl:obj[@"url"] id:nil];
+		}];
 	}
 
 	return self;
@@ -42,68 +57,6 @@
 - (NSString *) description
 {
 	return [NSString stringWithFormat:@"TinderUser %@:%@", self.id, self.name];
-}
-
-- (NSString *) id
-{
-	return _id ? : (_id = _data[@"_id"]);
-}
-
-- (NSString *) name
-{
-	return _name ? : (_name = _data[@"name"]);
-}
-
-- (NSString *) bio
-{
-	return _bio ? : (_bio = _data[@"bio"]);
-}
-
-- (NSDate *) birthdate
-{
-	NSString *dateString = _data[@"birth_date"];
-	if (!dateString) {
-		return nil;
-	}
-	return [NSDate dateFromString:dateString withFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
-}
-
-- (NSNumber *) age
-{
-	if (_age) {
-		return _age;
-	}
-
-	NSDate *date = self.birthdate;
-	if (date == nil) {
-		return nil;
-	}
-	NSTimeInterval seconds = [[NSDate date] timeIntervalSinceDate:date];
-	return _age = @((NSInteger) (seconds / (60 * 60 * 24 * 365)));
-}
-
-- (NSNumber *) distance
-{
-	NSNumber *miles = _data[@"distance_mi"];
-	return _distance ? : (_distance = @((NSInteger) (miles.floatValue * 1.6)));
-}
-
-- (NSArray<NSString *> *) jobs
-{
-	return _data[@"jobs"];
-}
-
-- (NSArray<NSString *> *) schools
-{
-	return _data[@"schools"];
-}
-
-- (NSArray<TNDRemoteImage *> *) photos
-{
-
-	return _photos ? : (_photos = [_data[@"photos"] bk_map:^id(NSDictionary *obj) {
-		return [TNDRemoteImage imageWithUrl:obj[@"url"] id:nil];
-	}]);
 }
 
 #pragma mark Actions

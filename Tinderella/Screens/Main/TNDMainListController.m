@@ -10,6 +10,7 @@
 #import "TNDTinderAPI.h"
 #import "TNDUser.h"
 #import "TNDBadooAPI.h"
+#import "../../../../../../Library/Caches/AppCode2017.1/DerivedData/Tinderella-dzsyhkunzhunbuebvhgaknjbjyoz/Build/Products/Debug/BlocksKit/BlocksKit.framework/Headers/NSArray+BlocksKit.h"
 
 @interface TNDMainListController () <TNDMainListViewDelegate, TNDMainListViewDataSource>
 VIEW_PROPERTY(TNDMainListView*);
@@ -61,7 +62,19 @@ VIEW_PROPERTY(TNDMainListView*);
 	}
 
 	self.loadingMore = YES;
-	PMKWhen(@[ [_tinderAPI recommendations], [_badooAPI recommendations] ]).then(^(NSArray *recommendations) {
+	PMKJoin(@[ [_tinderAPI recommendations], [_badooAPI recommendations] ]).catch(^(NSError *err) {
+		NSArray *promises = err.userInfo[PMKJoinPromisesKey];
+		NSArray *good     = [promises bk_select:^BOOL(TNDPromise *obj) {
+			return ![obj.value isKindOfClass:[NSError class]];
+		}];
+		NSArray *bad      = [promises bk_select:^BOOL(TNDPromise *obj) {
+			return [obj.value isKindOfClass:[NSError class]];
+		}];
+		NSLog(@"%@", bad);
+		return [good bk_map:^id(TNDPromise *obj) {
+			return obj.value;
+		}];
+	}).then(^(NSArray *recommendations) {
 		for (NSArray *recs in recommendations) {
 			[self appendRecommendations:recs];
 		}
@@ -75,10 +88,6 @@ VIEW_PROPERTY(TNDMainListView*);
 
 - (void) appendRecommendations:(NSArray *)recommendations
 {
-	if (_feed == nil) {
-		_feed = recommendations;
-		return;
-	}
 	NSArray *newGuys = [recommendations filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(TNDUser *obj, NSDictionary *bindings) {
 		if (![_feedIDs containsObject:obj.id]) {
 			[_feedIDs addObject:obj.id];
@@ -86,7 +95,7 @@ VIEW_PROPERTY(TNDMainListView*);
 		}
 		return NO;
 	}]];
-	_feed = [_feed arrayByAddingObjectsFromArray:newGuys];
+	_feed = _feed ? [_feed arrayByAddingObjectsFromArray:newGuys] : newGuys;
 }
 
 - (void) setLoadingMore:(BOOL)loadingMore

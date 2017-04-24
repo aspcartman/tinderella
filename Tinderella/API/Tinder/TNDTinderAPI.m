@@ -68,6 +68,11 @@
 		return [data[@"results"] bk_map:^id(id obj) {
 			return [TNDTinderUser userWithApi:self data:obj];
 		}];
+	}).then(^id(NSArray<TNDTinderUser *> *users) {
+		if ([users.firstObject.name isEqualTo:@"Tinder Team"]) {
+			return [NSError error:@"Out of likes"];
+		}
+		return users;
 	});
 }
 
