@@ -20,4 +20,16 @@
 	}
 	return [self.id isEqual:object.id];
 }
+
+- (TNDPromise<NSNumber *> *) like
+{
+	NSAssert(0, @"Unimplemented");
+	return nil;
+}
+
+- (TNDPromise<NSNumber *> *) dislike
+{
+	NSAssert(0, @"Unimplemented");
+	return nil;
+}
 @end

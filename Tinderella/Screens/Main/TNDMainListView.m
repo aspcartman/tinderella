@@ -66,17 +66,10 @@
 - (nullable NSView *) tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row
 {
 	TNDMainListUserCell *view = [tableView viewAtColumn:0 row:row makeIfNecessary:NO];
-	if (view) {
-//		NSLog(@"Same cell reused");
-	}
 	if (!view) {
 		view = [tableView makeViewWithIdentifier:@"cell" owner:self];
-		if (view) {
-//			NSLog(@"Cell reused");
-		}
 	}
 	if (!view) {
-//		NSLog(@"New cell created");
 		view = [TNDMainListUserCell new];
 		view.identifier = @"cell";
 	}

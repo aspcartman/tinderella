@@ -10,7 +10,6 @@
 		584567881EACFE9700C31D26 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584567871EACFE9700C31D26 /* MainMenu.xib */; };
 		7ECC412CFCA4BF2952E2DD1C /* Pods_TinderellaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71DD89F52EBBD9FBC807EC7 /* Pods_TinderellaTests.framework */; };
 		916A833F5873D17F891C71C2 /* NSFont+TNDFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 916A8D1A019E15219A9EB0E0 /* NSFont+TNDFont.m */; };
-		916A8E8AB4A2C8B048162B2E /* TNDTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 916A81BF2FD8888C55EEF170 /* TNDTableView.m */; };
 		B5EC115B1EAE08C7006ECC90 /* TNDMainListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5EC115A1EAE08C7006ECC90 /* TNDMainListView.xib */; };
 		BE213048C0E4B9C26323E49F /* TNDMainListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213BD4B39DB69F8714F307 /* TNDMainListView.m */; };
 		BE2131CF5E024B7E7B66B8A8 /* TNDController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213C2D78C455C5670EB831 /* TNDController.m */; };
@@ -50,8 +49,6 @@
 		584567871EACFE9700C31D26 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		6D3A5E8CF5FAFAA4CA071491 /* Pods-TinderellaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderellaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TinderellaTests/Pods-TinderellaTests.release.xcconfig"; sourceTree = "<group>"; };
 		916A80250999F0FB5E03EBC8 /* NSFont+TNDFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFont+TNDFont.h"; sourceTree = "<group>"; };
-		916A81BF2FD8888C55EEF170 /* TNDTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDTableView.m; sourceTree = "<group>"; };
-		916A820182EC233123FF42E0 /* TNDTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDTableView.h; sourceTree = "<group>"; };
 		916A8D1A019E15219A9EB0E0 /* NSFont+TNDFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFont+TNDFont.m"; sourceTree = "<group>"; };
 		929B2FAFF90400345C9E7928 /* Pods-Tinderella.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinderella.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tinderella/Pods-Tinderella.release.xcconfig"; sourceTree = "<group>"; };
 		9D82A5A78162AE95FE5671DD /* Pods-Tinderella.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinderella.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tinderella/Pods-Tinderella.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,8 +166,6 @@
 				BE21357D926FB06E2C1AEC8D /* TNDDefferedImage.h */,
 				BE213981D4278A208B7B46B1 /* TNDDefferedImageView.m */,
 				BE213D6AB452319B8408862C /* TNDDefferedImageView.h */,
-				916A81BF2FD8888C55EEF170 /* TNDTableView.m */,
-				916A820182EC233123FF42E0 /* TNDTableView.h */,
 				916A8D1A019E15219A9EB0E0 /* NSFont+TNDFont.m */,
 				916A80250999F0FB5E03EBC8 /* NSFont+TNDFont.h */,
 			);
@@ -506,7 +501,6 @@
 				BE2131D38CCFC93827DDF39F /* NSLabel.m in Sources */,
 				BE213228110FA2713E83F6EF /* TNDDefferedImage.m in Sources */,
 				BE213DE2D5FD9DBB31371366 /* TNDDefferedImageView.m in Sources */,
-				916A8E8AB4A2C8B048162B2E /* TNDTableView.m in Sources */,
 				916A833F5873D17F891C71C2 /* NSFont+TNDFont.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

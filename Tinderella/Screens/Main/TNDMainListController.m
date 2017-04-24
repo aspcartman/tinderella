@@ -55,26 +55,32 @@ VIEW_PROPERTY(TNDMainListView*);
 	if (self.loadingMore) {
 		return;
 	}
+
 	self.loadingMore = YES;
 	[_tinderAPI recommendations].then(^(NSArray *recommendations) {
-		if (_feed == nil) {
-			_feed = recommendations;
-		} else {
-			NSArray *newGuys = [recommendations filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(TNDUser *obj, NSDictionary *bindings) {
-				if (![_feedIDs containsObject:obj.id]) {
-					[_feedIDs addObject:obj.id];
-					return YES;
-				}
-				return NO;
-			}]];
-			_feed = [_feed arrayByAddingObjectsFromArray:newGuys];
-		}
+		[self appendRecommendations:recommendations];
+		[self.view reload];
 	}).catch(^(NSError *error) {
 		NSLog(@"Failed getting recommendations: %@", error);
 	}).always(^{
 		self.loadingMore = NO;
-		[self.view reload];
 	});
+}
+
+- (void) appendRecommendations:(NSArray *)recommendations
+{
+	if (_feed == nil) {
+		_feed = recommendations;
+		return;
+	}
+	NSArray *newGuys = [recommendations filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(TNDUser *obj, NSDictionary *bindings) {
+		if (![_feedIDs containsObject:obj.id]) {
+			[_feedIDs addObject:obj.id];
+			return YES;
+		}
+		return NO;
+	}]];
+	_feed = [_feed arrayByAddingObjectsFromArray:newGuys];
 }
 
 - (void) setLoadingMore:(BOOL)loadingMore
@@ -95,6 +101,9 @@ VIEW_PROPERTY(TNDMainListView*);
 
 - (void) mainListView:(TNDMainListView *)view didSelectUser:(TNDUser *)user
 {
+	[user like].then(^() {
+	}).always(^() {
+	});
 }
 
 - (void) mainListViewApproachingEndOfData:(TNDMainListView *)view

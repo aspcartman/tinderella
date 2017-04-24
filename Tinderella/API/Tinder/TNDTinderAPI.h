@@ -7,11 +7,13 @@
 #import "TNDPromise.h"
 
 @class TNDFacebookAPI;
+@class TNDUser;
 
 @interface TNDTinderAPI : NSObject
 + (instancetype) apiWithFacebook:(TNDFacebookAPI *)facebook;
 - (instancetype) initWithFacebook:(TNDFacebookAPI *)facebook;
 
 - (TNDPromise<NSString *> *) authenticate;
-- (TNDPromise<NSArray *> *) recommendations;
+- (TNDPromise<NSArray<TNDUser *> *> *) recommendations;
+- (TNDPromise<TNDUser *> *) userByID:(NSString *)id;
 @end

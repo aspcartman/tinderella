@@ -9,6 +9,7 @@
 #import "TNDFacebookAPI.h"
 #import "NSError+TNDError.h"
 #import "TNDTinderUser.h"
+#import "TNDUser.h"
 
 @implementation TNDTinderAPI
 {
@@ -70,6 +71,16 @@
 		}];
 	});
 }
+
+- (TNDPromise<TNDUser *> *) userByID:(NSString *)id
+{
+	return [self authenticate].then(^{
+		return [self request:@"GET" path:[NSString stringWithFormat:@"/user/%@", id] parameters:nil];
+	}).then(^(NSDictionary *res) {
+		return [TNDTinderUser userWithApi:self data:res];
+	});
+}
+
 
 - (TNDPromise *) request:(NSString *)HTTP path:(NSString *)path parameters:(id)parameters
 {
