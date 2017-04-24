@@ -45,6 +45,7 @@
 		_photoSmall4 = photoSmall4;
 
 		NSLabel *nameLabel = [NSLabel new];
+		nameLabel.font = [NSFont boldSystemFontOfSize:nameLabel.font.pointSize];
 		[self addSubview:nameLabel];
 		_nameLabel = nameLabel;
 
@@ -93,13 +94,17 @@
 
 	_bioLabel.keepTopOffsetTo(_nameLabel).equal = 0;
 	_bioLabel.keepLeftAlignTo(_nameLabel).equal = 0;
-	_bioLabel.keepRightMarginInset.min          = 0;
+	_bioLabel.keepRightMarginInset.equal        = 0;
 
 	[super updateConstraints];
 }
 
 - (void) setUser:(TNDUser *)user
 {
+	if ([_user isEqual:user]) {
+		return;
+	}
+
 	_user = user;
 	_nameLabel.text = user.name;
 	_bioLabel.text  = user.bio;
@@ -110,5 +115,11 @@
 	_photoSmall2.defferedImage = photos.count > 2 ? photos[2] : nil;
 	_photoSmall3.defferedImage = photos.count > 3 ? photos[3] : nil;
 	_photoSmall4.defferedImage = photos.count > 4 ? photos[4] : nil;
+}
+
+- (void) prepareForReuse
+{
+	self.user       = nil;
+	_nameLabel.font = [NSFont boldSystemFontOfSize:_nameLabel.font.pointSize];
 }
 @end

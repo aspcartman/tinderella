@@ -26,7 +26,6 @@
 	return self;
 }
 
-
 - (TNDPromise *) image
 {
 	return _promise ? : (_promise = [TNDPromise promiseWithAdapterBlock:^(PMKAdapter adapter) {

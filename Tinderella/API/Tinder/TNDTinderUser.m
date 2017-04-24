@@ -14,6 +14,8 @@
 	NSDictionary        *_data;
 }
 
+@synthesize photos = _photos;
+
 + (instancetype) userWithApi:(TNDTinderAPI *)api data:(NSDictionary *)data
 {
 	return [[self alloc] initWithApi:api data:data];
@@ -72,8 +74,9 @@
 
 - (NSArray<TNDDefferedImage *> *) photos
 {
-	return [_data[@"photos"] bk_map:^id(NSDictionary *obj) {
+
+	return _photos ? : (_photos = [_data[@"photos"] bk_map:^id(NSDictionary *obj) {
 		return [TNDDefferedImage imageWithUrl:obj[@"url"]];
-	}];
+	}]);
 }
 @end

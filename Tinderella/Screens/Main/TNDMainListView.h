@@ -15,6 +15,7 @@
 
 @protocol TNDMainListViewDelegate
 - (void) mainListView:(TNDMainListView *)view didSelectUser:(TNDUser *)user;
+- (void) mainListViewApproachingEndOfData:(TNDMainListView *)view;
 @end
 
 @interface TNDMainListView : NSView

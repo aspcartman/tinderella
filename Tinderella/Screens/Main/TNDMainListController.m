@@ -7,9 +7,11 @@
 #import "TNDMainListView.h"
 #import "TNDFacebookAPI.h"
 #import "TNDTinderAPI.h"
+#import "TNDUser.h"
 
 @interface TNDMainListController () <TNDMainListViewDelegate, TNDMainListViewDataSource>
 VIEW_PROPERTY(TNDMainListView*);
+@property (nonatomic, assign) BOOL loadingMore;
 @end
 
 @implementation TNDMainListController
@@ -17,6 +19,7 @@ VIEW_PROPERTY(TNDMainListView*);
 	TNDTinderAPI   *_tinderAPI;
 	TNDFacebookAPI *_facebookAPI;
 	NSArray        *_feed;
+	NSMutableSet   *_feedIDs;
 }
 
 - (instancetype) init
@@ -25,6 +28,7 @@ VIEW_PROPERTY(TNDMainListView*);
 	if (self) {
 		_facebookAPI = [TNDFacebookAPI new];
 		_tinderAPI   = [TNDTinderAPI apiWithFacebook:_facebookAPI];
+		_feedIDs     = [NSMutableSet new];
 	}
 
 	return self;
@@ -39,20 +43,44 @@ VIEW_PROPERTY(TNDMainListView*);
 	self.view           = listView;
 }
 
-
 - (void) viewDidAppear
 {
 	[super viewDidAppear];
 
-	self.view.loading = YES;
+	[self loadMore];
+}
+
+- (void) loadMore
+{
+	if (self.loadingMore) {
+		return;
+	}
+	self.loadingMore = YES;
 	[_tinderAPI recommendations].then(^(NSArray *recommendations) {
-		_feed = _feed ? [_feed arrayByAddingObjectsFromArray:recommendations] : recommendations;
+		if (_feed == nil) {
+			_feed = recommendations;
+		} else {
+			NSArray *newGuys = [recommendations filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(TNDUser *obj, NSDictionary *bindings) {
+				if (![_feedIDs containsObject:obj.id]) {
+					[_feedIDs addObject:obj.id];
+					return YES;
+				}
+				return NO;
+			}]];
+			_feed = [_feed arrayByAddingObjectsFromArray:newGuys];
+		}
 	}).catch(^(NSError *error) {
 		NSLog(@"Failed getting recommendations: %@", error);
 	}).always(^{
-		self.view.loading = NO;
+		self.loadingMore = NO;
 		[self.view reload];
 	});
+}
+
+- (void) setLoadingMore:(BOOL)loadingMore
+{
+	_loadingMore = loadingMore;
+	self.view.loading = loadingMore;
 }
 
 - (NSUInteger) mainListViewNumberOfUsers:(TNDMainListView *)view
@@ -67,5 +95,10 @@ VIEW_PROPERTY(TNDMainListView*);
 
 - (void) mainListView:(TNDMainListView *)view didSelectUser:(TNDUser *)user
 {
+}
+
+- (void) mainListViewApproachingEndOfData:(TNDMainListView *)view
+{
+	[self loadMore];
 }
 @end

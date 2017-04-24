@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		584567881EACFE9700C31D26 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584567871EACFE9700C31D26 /* MainMenu.xib */; };
 		7ECC412CFCA4BF2952E2DD1C /* Pods_TinderellaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71DD89F52EBBD9FBC807EC7 /* Pods_TinderellaTests.framework */; };
+		916A8E8AB4A2C8B048162B2E /* TNDTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 916A81BF2FD8888C55EEF170 /* TNDTableView.m */; };
+		B5EC115B1EAE08C7006ECC90 /* TNDMainListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5EC115A1EAE08C7006ECC90 /* TNDMainListView.xib */; };
 		BE213048C0E4B9C26323E49F /* TNDMainListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213BD4B39DB69F8714F307 /* TNDMainListView.m */; };
 		BE2131CF5E024B7E7B66B8A8 /* TNDController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213C2D78C455C5670EB831 /* TNDController.m */; };
 		BE2131D38CCFC93827DDF39F /* NSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213EB85CEA30733BEAA607 /* NSLabel.m */; };
@@ -46,10 +48,13 @@
 		003DF411EFBE68E82264C215 /* Pods_Tinderella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinderella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		584567871EACFE9700C31D26 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		6D3A5E8CF5FAFAA4CA071491 /* Pods-TinderellaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderellaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TinderellaTests/Pods-TinderellaTests.release.xcconfig"; sourceTree = "<group>"; };
+		916A81BF2FD8888C55EEF170 /* TNDTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDTableView.m; sourceTree = "<group>"; };
+		916A820182EC233123FF42E0 /* TNDTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDTableView.h; sourceTree = "<group>"; };
 		929B2FAFF90400345C9E7928 /* Pods-Tinderella.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinderella.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tinderella/Pods-Tinderella.release.xcconfig"; sourceTree = "<group>"; };
 		9D82A5A78162AE95FE5671DD /* Pods-Tinderella.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinderella.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tinderella/Pods-Tinderella.debug.xcconfig"; sourceTree = "<group>"; };
 		A361BF8ABAC4F0C10AD2256D /* Pods-TinderellaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderellaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TinderellaTests/Pods-TinderellaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A71DD89F52EBBD9FBC807EC7 /* Pods_TinderellaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderellaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5EC115A1EAE08C7006ECC90 /* TNDMainListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TNDMainListView.xib; sourceTree = "<group>"; };
 		BE2130D6C703206694590BC9 /* TNDFacebookToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDFacebookToken.m; sourceTree = "<group>"; };
 		BE2130FC99958FFA12FE75BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE213184E32779E3EA3AEFE0 /* TNDMainListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDMainListController.m; sourceTree = "<group>"; };
@@ -161,6 +166,8 @@
 				BE21357D926FB06E2C1AEC8D /* TNDDefferedImage.h */,
 				BE213981D4278A208B7B46B1 /* TNDDefferedImageView.m */,
 				BE213D6AB452319B8408862C /* TNDDefferedImageView.h */,
+				916A81BF2FD8888C55EEF170 /* TNDTableView.m */,
+				916A820182EC233123FF42E0 /* TNDTableView.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -220,6 +227,7 @@
 				BE213184E32779E3EA3AEFE0 /* TNDMainListController.m */,
 				BE213E3E54538832DEF61934 /* TNDMainListView.h */,
 				BE213BD4B39DB69F8714F307 /* TNDMainListView.m */,
+				B5EC115A1EAE08C7006ECC90 /* TNDMainListView.xib */,
 				BE213C17B6EDADCB5C081969 /* Cell */,
 			);
 			path = Main;
@@ -362,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE213BB7EAFB2653D936024F /* Assets.xcassets in Resources */,
+				B5EC115B1EAE08C7006ECC90 /* TNDMainListView.xib in Resources */,
 				584567881EACFE9700C31D26 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -426,7 +435,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		8597B5F5F810EF029D5B8C46 /* [CP] Check Pods Manifest.lock */ = {
@@ -441,7 +450,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		BD03B4530CBDAD8A7F6AAF24 /* [CP] Embed Pods Frameworks */ = {
@@ -492,6 +501,7 @@
 				BE2131D38CCFC93827DDF39F /* NSLabel.m in Sources */,
 				BE213228110FA2713E83F6EF /* TNDDefferedImage.m in Sources */,
 				BE213DE2D5FD9DBB31371366 /* TNDDefferedImageView.m in Sources */,
+				916A8E8AB4A2C8B048162B2E /* TNDTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

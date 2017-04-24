@@ -9,4 +9,15 @@
 @implementation TNDUser
 {
 }
+
+- (BOOL) isEqual:(TNDUser *)object
+{
+	if ([super isEqual:object]) {
+		return YES;
+	}
+	if (![object isKindOfClass:self.class]) {
+		return NO;
+	}
+	return [self.id isEqual:object.id];
+}
 @end

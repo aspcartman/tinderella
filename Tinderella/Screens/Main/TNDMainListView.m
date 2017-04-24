@@ -14,46 +14,75 @@
 {
 	NSTableView  *_tableView;
 	NSScrollView *_scrollView;
+	NSUInteger   _lastCount;
 }
 
 - (instancetype) init
 {
 	self = [super init];
 	if (self) {
-		NSTableView *tableView = [[NSTableView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-		tableView.delegate   = self;
-		tableView.dataSource = self;
+		NSTableView *tableView = [[NSTableView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+		tableView.delegate                                  = self;
+		tableView.dataSource                                = self;
+		tableView.focusRingType                             = NSFocusRingTypeNone;
+		tableView.translatesAutoresizingMaskIntoConstraints = YES;
+		tableView.rowHeight                                 = [self tableView:tableView heightOfRow:0];
+		[tableView registerNib:nil forIdentifier:@""];
 		[tableView addTableColumn:[[NSTableColumn alloc] initWithIdentifier:@"ololo"]];
 		_tableView = tableView;
 
 		NSScrollView *scrollView = [[NSScrollView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
-		scrollView.documentView = tableView;
+		scrollView.documentView                                = tableView;
+		scrollView.hasVerticalScroller                         = YES;
+		scrollView.contentView.postsBoundsChangedNotifications = YES;
 		[self addSubview:scrollView];
 		_scrollView = scrollView;
 
-		[self setNeedsUpdateConstraints:YES];
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(boundsDidChange:) name:NSViewBoundsDidChangeNotification object:scrollView.contentView];
 	}
 
 	return self;
 }
 
-- (void) updateConstraints
+- (void) boundsDidChange:(id)boundsDidChange
 {
-	_scrollView.keepInsets.equal = 0;
+	NSRect rect = _scrollView.contentView.bounds;
+	if (_tableView.frame.size.height - (rect.origin.y + rect.size.height) > 500) {
+		return;
+	}
+	[_delegate mainListViewApproachingEndOfData:self];
+}
 
-	[super updateConstraints];
+- (void) layout
+{
+	_scrollView.frame = self.bounds;
 }
 
 #pragma mark TableView
 
 - (NSInteger) numberOfRowsInTableView:(NSTableView *)tableView
 {
-	return [_dataSource mainListViewNumberOfUsers:self];
+	return _lastCount = [_dataSource mainListViewNumberOfUsers:self];
 }
 
 - (nullable NSView *) tableView:(NSTableView *)tableView viewForTableColumn:(nullable NSTableColumn *)tableColumn row:(NSInteger)row
 {
-	TNDMainListUserCell *view = [TNDMainListUserCell new];
+	TNDMainListUserCell *view = [tableView viewAtColumn:0 row:row makeIfNecessary:NO];
+	if (view) {
+//		NSLog(@"Same cell reused");
+	}
+	if (!view) {
+		view = [tableView makeViewWithIdentifier:@"cell" owner:self];
+		if (view) {
+//			NSLog(@"Cell reused");
+		}
+	}
+	if (!view) {
+//		NSLog(@"New cell created");
+		view = [TNDMainListUserCell new];
+		view.identifier = @"cell";
+	}
+
 	view.user = [_dataSource mainListView:self userAtRow:(NSUInteger) row];
 	return view;
 }
@@ -69,9 +98,8 @@
 	return YES;
 }
 
-
 - (void) reload
 {
-	[_tableView reloadData];
+	[_tableView noteNumberOfRowsChanged];
 }
 @end

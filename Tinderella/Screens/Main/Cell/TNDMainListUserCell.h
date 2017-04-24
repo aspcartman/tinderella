@@ -7,6 +7,6 @@
 
 @class TNDUser;
 
-@interface TNDMainListUserCell : NSView
+@interface TNDMainListUserCell : NSTableCellView
 @property (nonatomic, strong) TNDUser *user;
 @end

@@ -39,7 +39,6 @@
 	[super updateConstraints];
 }
 
-
 - (void) setDefferedImage:(TNDDefferedImage *)defferedImage
 {
 	_defferedImage = defferedImage;
@@ -55,7 +54,11 @@
 		if (_defferedImage != defferedImage) {
 			return;
 		}
-		self.image = image;
+		self.image      = image;
+		self.alphaValue = 0.0f;
+		[NSAnimationContext runAnimationGroup:^(NSAnimationContext *context) {
+			[[self animator] setAlphaValue:1.0f];
+		}                   completionHandler:nil];
 	}).always(^{
 		if (_defferedImage != defferedImage) {
 			return;
