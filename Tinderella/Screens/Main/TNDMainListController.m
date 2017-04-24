@@ -3,11 +3,13 @@
 // Copyright (c) 2017 ASPCartman. All rights reserved.
 //
 
+#import <PromiseKit/PromiseKit.h>
 #import "TNDMainListController.h"
 #import "TNDMainListView.h"
 #import "TNDFacebookAPI.h"
 #import "TNDTinderAPI.h"
 #import "TNDUser.h"
+#import "TNDBadooAPI.h"
 
 @interface TNDMainListController () <TNDMainListViewDelegate, TNDMainListViewDataSource>
 VIEW_PROPERTY(TNDMainListView*);
@@ -20,6 +22,7 @@ VIEW_PROPERTY(TNDMainListView*);
 	TNDFacebookAPI *_facebookAPI;
 	NSArray        *_feed;
 	NSMutableSet   *_feedIDs;
+	TNDBadooAPI    *_badooAPI;
 }
 
 - (instancetype) init
@@ -28,6 +31,7 @@ VIEW_PROPERTY(TNDMainListView*);
 	if (self) {
 		_facebookAPI = [TNDFacebookAPI new];
 		_tinderAPI   = [TNDTinderAPI apiWithFacebook:_facebookAPI];
+		_badooAPI    = [TNDBadooAPI apiWithFacebook:_facebookAPI];
 		_feedIDs     = [NSMutableSet new];
 	}
 
@@ -57,8 +61,10 @@ VIEW_PROPERTY(TNDMainListView*);
 	}
 
 	self.loadingMore = YES;
-	[_tinderAPI recommendations].then(^(NSArray *recommendations) {
-		[self appendRecommendations:recommendations];
+	PMKWhen(@[ [_tinderAPI recommendations], [_badooAPI recommendations] ]).then(^(NSArray *recommendations) {
+		for (NSArray *recs in recommendations) {
+			[self appendRecommendations:recs];
+		}
 		[self.view updateForMoreUsers];
 	}).catch(^(NSError *error) {
 		NSLog(@"Failed getting recommendations: %@", error);

@@ -5,8 +5,8 @@
 
 #import <AppKit/AppKit.h>
 
-@class TNDDefferedImage;
+@class TNDRemoteImage;
 
 @interface TNDDefferedImageView : NSImageView
-@property (nonatomic, strong) TNDDefferedImage *defferedImage;
+@property (nonatomic, strong) TNDRemoteImage *defferedImage;
 @end

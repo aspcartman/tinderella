@@ -5,7 +5,7 @@
 
 #import <KeepLayout/KeepLayout.h>
 #import "TNDDefferedImageView.h"
-#import "TNDDefferedImage.h"
+#import "TNDRemoteImage.h"
 
 @interface TNDDefferedImageView ()
 @property (nonatomic, assign) BOOL loading;
@@ -39,7 +39,7 @@
 	[super updateConstraints];
 }
 
-- (void) setDefferedImage:(TNDDefferedImage *)defferedImage
+- (void) setDefferedImage:(TNDRemoteImage *)defferedImage
 {
 	_defferedImage = defferedImage;
 

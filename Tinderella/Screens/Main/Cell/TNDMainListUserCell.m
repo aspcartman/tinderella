@@ -131,7 +131,7 @@
 	_bioLabel.text      = user.bio;
 	_distanceLabel.text = user.distance ? [NSString stringWithFormat:@"%@ km", user.distance] : nil;
 
-	NSArray<TNDDefferedImage *> *photos = user.photos;
+	NSArray<TNDRemoteImage *> *photos = user.photos;
 	_photo.defferedImage       = [photos firstObject];
 	_photoSmall1.defferedImage = photos.count > 1 ? photos[1] : nil;
 	_photoSmall2.defferedImage = photos.count > 2 ? photos[2] : nil;

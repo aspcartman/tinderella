@@ -91,7 +91,7 @@
 	});
 }
 
-- (TNDPromise *) pass:(TNDUser *)user
+- (TNDPromise *) dislike:(TNDUser *)user
 {
 	return [self authenticate].then(^{
 		return [self request:@"GET" path:[NSString stringWithFormat:@"/pass/%@", user.id] parameters:nil];

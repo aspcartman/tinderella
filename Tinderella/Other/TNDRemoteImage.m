@@ -3,24 +3,25 @@
 // Copyright (c) 2017 ASPCartman. All rights reserved.
 //
 
-#import "TNDDefferedImage.h"
+#import "TNDRemoteImage.h"
 
-@implementation TNDDefferedImage
+@implementation TNDRemoteImage
 {
 	TNDPromise<NSImage *> *_promise;
 	NSString              *_url;
 }
 
-+ (instancetype) imageWithUrl:(NSString *)imageURL
++ (instancetype) imageWithUrl:(NSString *)imageURL id:(NSString *)id
 {
-	return [[self alloc] initWithUrl:imageURL];
+	return [[self alloc] initWithUrl:imageURL id:id];
 }
 
-- (instancetype) initWithUrl:(NSString *)imageURL
+- (instancetype) initWithUrl:(NSString *)imageURL id:(NSString *)id
 {
 	self = [super init];
 	if (self) {
 		_url = imageURL;
+		_id  = id;
 	}
 
 	return self;

@@ -4,7 +4,7 @@
 //
 
 #import "TNDUser.h"
-#import "TNDDefferedImage.h"
+#import "TNDRemoteImage.h"
 
 @implementation TNDUser
 {

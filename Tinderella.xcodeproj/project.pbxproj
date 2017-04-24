@@ -11,12 +11,14 @@
 		7ECC412CFCA4BF2952E2DD1C /* Pods_TinderellaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71DD89F52EBBD9FBC807EC7 /* Pods_TinderellaTests.framework */; };
 		916A833F5873D17F891C71C2 /* NSFont+TNDFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 916A8D1A019E15219A9EB0E0 /* NSFont+TNDFont.m */; };
 		BE213048C0E4B9C26323E49F /* TNDMainListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213BD4B39DB69F8714F307 /* TNDMainListView.m */; };
+		BE2130FB3A9F44251E181BC1 /* TNDBadooUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21389D6CC89B2EFEC06E5F /* TNDBadooUser.m */; };
 		BE2131CF5E024B7E7B66B8A8 /* TNDController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213C2D78C455C5670EB831 /* TNDController.m */; };
 		BE2131D38CCFC93827DDF39F /* NSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213EB85CEA30733BEAA607 /* NSLabel.m */; };
 		BE2131FC14DCAC8DF00AE5C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21396A700FB8D0055F2283 /* main.m */; };
-		BE213228110FA2713E83F6EF /* TNDDefferedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21369030220AF8C073C758 /* TNDDefferedImage.m */; };
+		BE213228110FA2713E83F6EF /* TNDRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21369030220AF8C073C758 /* TNDRemoteImage.m */; };
 		BE213270E3781D89B443BDCA /* TinderellaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213E88B5F75C92D3F584FA /* TinderellaTests.m */; };
 		BE2132842E8D7B3859E6DA0B /* NSError+TNDError.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213C5DC630962B01C27887 /* NSError+TNDError.m */; };
+		BE21333B27C2B6CEE97D085A /* TNDBadooAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2133128E5D283844A8B028 /* TNDBadooAPI.m */; };
 		BE213467A0C46B4148000307 /* TNDPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213E9F18D9B0D8BA4165BE /* TNDPromise.m */; };
 		BE213688F825816D524478E4 /* TNDMainListController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213184E32779E3EA3AEFE0 /* TNDMainListController.m */; };
 		BE21376689A3F8A5EB92391A /* TNDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2135C461572B6E859005A4 /* TNDAppDelegate.m */; };
@@ -55,20 +57,24 @@
 		A71DD89F52EBBD9FBC807EC7 /* Pods_TinderellaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderellaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2130D6C703206694590BC9 /* TNDFacebookToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDFacebookToken.m; sourceTree = "<group>"; };
 		BE2130FC99958FFA12FE75BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE21312D35D846F562B4833C /* TNDBadooAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDBadooAPI.h; sourceTree = "<group>"; };
 		BE213184E32779E3EA3AEFE0 /* TNDMainListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDMainListController.m; sourceTree = "<group>"; };
 		BE2131A4F974B5B2E7662858 /* TNDPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDPromise.h; sourceTree = "<group>"; };
 		BE2132236A5C3309447088DF /* TinderellaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinderellaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE213234EA11CAE4FBCD09E7 /* TNDTinderAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDTinderAPI.m; sourceTree = "<group>"; };
 		BE2132998DD39161280DB0B0 /* TNDFacebookAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDFacebookAuthController.h; sourceTree = "<group>"; };
+		BE2133128E5D283844A8B028 /* TNDBadooAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDBadooAPI.m; sourceTree = "<group>"; };
 		BE213364BF3ACFAE56E62624 /* NSError+TNDError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+TNDError.h"; sourceTree = "<group>"; };
 		BE2133B47283308605105E42 /* Tinderella.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinderella.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE21349B442B658950BF0F23 /* TNDBadooUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDBadooUser.h; sourceTree = "<group>"; };
 		BE2134C32FED408270B54E3C /* TNDFacebookToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDFacebookToken.h; sourceTree = "<group>"; };
-		BE21357D926FB06E2C1AEC8D /* TNDDefferedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDDefferedImage.h; sourceTree = "<group>"; };
+		BE21357D926FB06E2C1AEC8D /* TNDRemoteImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDRemoteImage.h; sourceTree = "<group>"; };
 		BE2135C461572B6E859005A4 /* TNDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNDAppDelegate.m; sourceTree = "<group>"; };
 		BE2135CDB80C0C258D672D67 /* TNDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDUser.h; sourceTree = "<group>"; };
 		BE2135D0A4B193CC050784C6 /* TNDMainListUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDMainListUserCell.h; sourceTree = "<group>"; };
-		BE21369030220AF8C073C758 /* TNDDefferedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDDefferedImage.m; sourceTree = "<group>"; };
+		BE21369030220AF8C073C758 /* TNDRemoteImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDRemoteImage.m; sourceTree = "<group>"; };
 		BE2136A528B83ADC1606044E /* TNDFacebookAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDFacebookAuthController.m; sourceTree = "<group>"; };
+		BE21389D6CC89B2EFEC06E5F /* TNDBadooUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDBadooUser.m; sourceTree = "<group>"; };
 		BE2138CBD1531968B40E1D52 /* TNDMainListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDMainListController.h; sourceTree = "<group>"; };
 		BE213915B93484F210D3A62C /* TNDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDController.h; sourceTree = "<group>"; };
 		BE2139402FF5FF4F356CA602 /* TNDImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDImage.h; sourceTree = "<group>"; };
@@ -160,8 +166,8 @@
 				BE213364BF3ACFAE56E62624 /* NSError+TNDError.h */,
 				BE213EB85CEA30733BEAA607 /* NSLabel.m */,
 				BE213E42F3B05C557BCB3F0D /* NSLabel.h */,
-				BE21369030220AF8C073C758 /* TNDDefferedImage.m */,
-				BE21357D926FB06E2C1AEC8D /* TNDDefferedImage.h */,
+				BE21369030220AF8C073C758 /* TNDRemoteImage.m */,
+				BE21357D926FB06E2C1AEC8D /* TNDRemoteImage.h */,
 				BE213981D4278A208B7B46B1 /* TNDDefferedImageView.m */,
 				BE213D6AB452319B8408862C /* TNDDefferedImageView.h */,
 				916A8D1A019E15219A9EB0E0 /* NSFont+TNDFont.m */,
@@ -205,6 +211,7 @@
 			children = (
 				BE21348DFFD58BFA2B624E59 /* Tinder */,
 				BE2134BC26C229562933B444 /* Facebook */,
+				BE213B605E4D95F1F8A72547 /* Badoo */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -228,6 +235,17 @@
 				BE213C17B6EDADCB5C081969 /* Cell */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		BE213B605E4D95F1F8A72547 /* Badoo */ = {
+			isa = PBXGroup;
+			children = (
+				BE2133128E5D283844A8B028 /* TNDBadooAPI.m */,
+				BE21312D35D846F562B4833C /* TNDBadooAPI.h */,
+				BE21389D6CC89B2EFEC06E5F /* TNDBadooUser.m */,
+				BE21349B442B658950BF0F23 /* TNDBadooUser.h */,
+			);
+			path = Badoo;
 			sourceTree = "<group>";
 		};
 		BE213C17B6EDADCB5C081969 /* Cell */ = {
@@ -495,9 +513,11 @@
 				BE213048C0E4B9C26323E49F /* TNDMainListView.m in Sources */,
 				BE213E4268F483B96D8B4ED8 /* TNDMainListUserCell.m in Sources */,
 				BE2131D38CCFC93827DDF39F /* NSLabel.m in Sources */,
-				BE213228110FA2713E83F6EF /* TNDDefferedImage.m in Sources */,
+				BE213228110FA2713E83F6EF /* TNDRemoteImage.m in Sources */,
 				BE213DE2D5FD9DBB31371366 /* TNDDefferedImageView.m in Sources */,
 				916A833F5873D17F891C71C2 /* NSFont+TNDFont.m in Sources */,
+				BE21333B27C2B6CEE97D085A /* TNDBadooAPI.m in Sources */,
+				BE2130FB3A9F44251E181BC1 /* TNDBadooUser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

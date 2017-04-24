@@ -7,7 +7,7 @@
 #import <NSDate_Helper/NSDate+Helper.h>
 #import "TNDTinderUser.h"
 #import "TNDTinderAPI.h"
-#import "TNDDefferedImage.h"
+#import "TNDRemoteImage.h"
 
 @implementation TNDTinderUser
 {
@@ -98,11 +98,11 @@
 	return _data[@"schools"];
 }
 
-- (NSArray<TNDDefferedImage *> *) photos
+- (NSArray<TNDRemoteImage *> *) photos
 {
 
 	return _photos ? : (_photos = [_data[@"photos"] bk_map:^id(NSDictionary *obj) {
-		return [TNDDefferedImage imageWithUrl:obj[@"url"]];
+		return [TNDRemoteImage imageWithUrl:obj[@"url"] id:nil];
 	}]);
 }
 
@@ -117,7 +117,7 @@
 
 - (TNDPromise<NSNumber *> *) dislike
 {
-	return [_api pass:self].then(^{
+	return [_api dislike:self].then(^{
 		_matchState = TNDUserMatchStateDisliked;
 	});
 }
