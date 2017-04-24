@@ -12,6 +12,7 @@
 @property (nonatomic, readonly) NSString                    *name;
 @property (nonatomic, readonly) NSString                    *bio;
 @property (nonatomic, readonly) NSDate                      *birthdate;
+@property (nonatomic, readonly) NSNumber                    *age;
 @property (nonatomic, readonly) NSNumber                    *distance;
 @property (nonatomic, readonly) NSArray<NSString *>         *jobs;
 @property (nonatomic, readonly) NSArray<NSString *>         *schools;

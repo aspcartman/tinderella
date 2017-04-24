@@ -22,12 +22,10 @@
 	self = [super init];
 	if (self) {
 		NSTableView *tableView = [[NSTableView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
-		tableView.delegate                                  = self;
-		tableView.dataSource                                = self;
-		tableView.focusRingType                             = NSFocusRingTypeNone;
-		tableView.translatesAutoresizingMaskIntoConstraints = YES;
-		tableView.rowHeight                                 = [self tableView:tableView heightOfRow:0];
-		[tableView registerNib:nil forIdentifier:@""];
+		tableView.delegate   = self;
+		tableView.dataSource = self;
+		tableView.rowHeight  = [self tableView:tableView heightOfRow:0];
+		[tableView setHeaderView:nil];
 		[tableView addTableColumn:[[NSTableColumn alloc] initWithIdentifier:@"ololo"]];
 		_tableView = tableView;
 

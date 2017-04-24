@@ -8,6 +8,7 @@
 #import "TNDUser.h"
 #import "NSLabel.h"
 #import "TNDDefferedImageView.h"
+#import "NSFont+TNDFont.h"
 
 @implementation TNDMainListUserCell
 {
@@ -18,6 +19,8 @@
 	TNDDefferedImageView *_photoSmall2;
 	TNDDefferedImageView *_photoSmall3;
 	TNDDefferedImageView *_photoSmall4;
+	NSLabel              *_ageLabel;
+	NSLabel              *_distanceLabel;
 }
 - (instancetype) init
 {
@@ -45,9 +48,19 @@
 		_photoSmall4 = photoSmall4;
 
 		NSLabel *nameLabel = [NSLabel new];
-		nameLabel.font = [NSFont boldSystemFontOfSize:nameLabel.font.pointSize];
+		nameLabel.font = [NSFont tnd_fontWithScale:1.2 weight:NSFontWeightMedium];
 		[self addSubview:nameLabel];
 		_nameLabel = nameLabel;
+
+		NSLabel *ageLabel = [NSLabel new];
+		ageLabel.font = [NSFont tnd_fontWithScale:1.2 weight:NSFontWeightLight];
+		[self addSubview:ageLabel];
+		_ageLabel = ageLabel;
+
+		NSLabel *distanceLabel = [NSLabel new];
+		distanceLabel.font = [NSFont tnd_fontWithScale:1.2 weight:NSFontWeightLight];
+		[self addSubview:distanceLabel];
+		_distanceLabel = distanceLabel;
 
 		NSLabel *bioLabel = [NSLabel new];
 		bioLabel.cell.wraps         = YES;
@@ -92,6 +105,12 @@
 	_nameLabel.keepTopMarginInset.equal             = 0;
 	_nameLabel.keepLeftOffsetTo(_photoSmall3).equal = 10;
 
+	_ageLabel.keepFirstBaselineAlignTo(_nameLabel).equal = 0;
+	_ageLabel.keepLeftOffsetTo(_nameLabel).equal         = 10;
+
+	_distanceLabel.keepFirstBaselineAlignTo(_nameLabel).equal = 0;
+	_distanceLabel.keepRightMarginInset.equal                 = 20;
+
 	_bioLabel.keepTopOffsetTo(_nameLabel).equal = 0;
 	_bioLabel.keepLeftAlignTo(_nameLabel).equal = 0;
 	_bioLabel.keepRightMarginInset.equal        = 0;
@@ -106,8 +125,10 @@
 	}
 
 	_user = user;
-	_nameLabel.text = user.name;
-	_bioLabel.text  = user.bio;
+	_nameLabel.text     = user.name;
+	_ageLabel.text      = user.age.stringValue;
+	_bioLabel.text      = user.bio;
+	_distanceLabel.text = user.distance ? [NSString stringWithFormat:@"%@ km", user.distance] : nil;
 
 	NSArray<TNDDefferedImage *> *photos = user.photos;
 	_photo.defferedImage       = [photos firstObject];
@@ -120,6 +141,7 @@
 - (void) prepareForReuse
 {
 	self.user       = nil;
-	_nameLabel.font = [NSFont boldSystemFontOfSize:_nameLabel.font.pointSize];
+	_ageLabel.font  = [NSFont tnd_fontWithScale:1.2 weight:NSFontWeightLight];
+	_nameLabel.font = [NSFont tnd_fontWithScale:1.2 weight:NSFontWeightMedium];
 }
 @end
