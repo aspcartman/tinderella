@@ -1,0 +1,87 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - dyci (0.1.6):
+    - dyci/Injections (= 0.1.6)
+  - dyci/Injections (0.1.6)
+  - KeepLayout (1.7.0):
+    - KeepLayout/Swift (= 1.7.0)
+  - KeepLayout/ObjC (1.7.0)
+  - KeepLayout/Swift (1.7.0):
+    - KeepLayout/ObjC
+  - NSDate+Helper (1.0.4)
+  - NSDate-TKExtensions (0.4)
+  - PromiseKit (4.1.8):
+    - PromiseKit/Foundation (= 4.1.8)
+    - PromiseKit/QuartzCore (= 4.1.8)
+    - PromiseKit/UIKit (= 4.1.8)
+  - PromiseKit/CorePromise (4.1.8)
+  - PromiseKit/Foundation (4.1.8):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.1.8):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.1.8):
+    - PromiseKit/CorePromise
+
+DEPENDENCIES:
+  - AFNetworking
+  - BlocksKit
+  - dyci (from `https://github.com/aspcartman/dyci-main.git`, branch `osx`)
+  - KeepLayout (from `https://github.com/iMartinKiss/KeepLayout.git`, branch `non-swift`)
+  - NSDate+Helper
+  - NSDate-TKExtensions
+  - PromiseKit (from `https://github.com/mxcl/PromiseKit.git`)
+
+EXTERNAL SOURCES:
+  dyci:
+    :branch: osx
+    :git: https://github.com/aspcartman/dyci-main.git
+  KeepLayout:
+    :branch: non-swift
+    :git: https://github.com/iMartinKiss/KeepLayout.git
+  PromiseKit:
+    :git: https://github.com/mxcl/PromiseKit.git
+
+CHECKOUT OPTIONS:
+  dyci:
+    :commit: 0313b8558c1d79bb3a74713784718c6c43cba8b9
+    :git: https://github.com/aspcartman/dyci-main.git
+  KeepLayout:
+    :commit: bab6833dc1b9a84b9be58874fa5ee786f47fc5f9
+    :git: https://github.com/iMartinKiss/KeepLayout.git
+  PromiseKit:
+    :commit: c341098b14d519e8f47c557a7273874a65ac1041
+    :git: https://github.com/mxcl/PromiseKit.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  dyci: 76b85cc88b6606b206a758a4c5243def8c3fd40b
+  KeepLayout: 1881e51638fab0a0748890748de8deb9f01891a1
+  NSDate+Helper: 78f517ac1c67914096433466fa7d20b812b9d86c
+  NSDate-TKExtensions: 73572c96f1afc60632391948dd8016d194f688d3
+  PromiseKit: 4b0c6cc017e7f3591b60f70008a83d64c5d64258
+
+PODFILE CHECKSUM: ebc585875dfad22a97d2b3b0fe9173d610853120
+
+COCOAPODS: 1.2.0

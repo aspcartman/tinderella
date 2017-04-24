@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		584567881EACFE9700C31D26 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584567871EACFE9700C31D26 /* MainMenu.xib */; };
+		7ECC412CFCA4BF2952E2DD1C /* Pods_TinderellaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71DD89F52EBBD9FBC807EC7 /* Pods_TinderellaTests.framework */; };
+		BE213048C0E4B9C26323E49F /* TNDMainListView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213BD4B39DB69F8714F307 /* TNDMainListView.m */; };
+		BE2131CF5E024B7E7B66B8A8 /* TNDController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213C2D78C455C5670EB831 /* TNDController.m */; };
+		BE2131D38CCFC93827DDF39F /* NSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213EB85CEA30733BEAA607 /* NSLabel.m */; };
+		BE2131FC14DCAC8DF00AE5C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21396A700FB8D0055F2283 /* main.m */; };
+		BE213228110FA2713E83F6EF /* TNDDefferedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BE21369030220AF8C073C758 /* TNDDefferedImage.m */; };
+		BE213270E3781D89B443BDCA /* TinderellaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213E88B5F75C92D3F584FA /* TinderellaTests.m */; };
+		BE2132842E8D7B3859E6DA0B /* NSError+TNDError.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213C5DC630962B01C27887 /* NSError+TNDError.m */; };
+		BE213467A0C46B4148000307 /* TNDPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213E9F18D9B0D8BA4165BE /* TNDPromise.m */; };
+		BE213688F825816D524478E4 /* TNDMainListController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213184E32779E3EA3AEFE0 /* TNDMainListController.m */; };
+		BE21376689A3F8A5EB92391A /* TNDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2135C461572B6E859005A4 /* TNDAppDelegate.m */; };
+		BE213A146E862BE984BC47CA /* TNDTinderAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213234EA11CAE4FBCD09E7 /* TNDTinderAPI.m */; };
+		BE213A45A6EA94CE0A56B6F1 /* TNDFacebookToken.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2130D6C703206694590BC9 /* TNDFacebookToken.m */; };
+		BE213B3A3BCD2574119EC8E0 /* TNDTinderUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213C349ECC01FC3D0D94CB /* TNDTinderUser.m */; };
+		BE213BB7EAFB2653D936024F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2130FC99958FFA12FE75BD /* Assets.xcassets */; };
+		BE213CD40EDC1AE4F081557A /* TNDImage.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213AE0C010B4939ED00D2D /* TNDImage.m */; };
+		BE213DDF382506F3729C9C3F /* TNDFacebookAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE2136A528B83ADC1606044E /* TNDFacebookAuthController.m */; };
+		BE213DE2D5FD9DBB31371366 /* TNDDefferedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213981D4278A208B7B46B1 /* TNDDefferedImageView.m */; };
+		BE213DEE4EFCD81190CCAE4E /* TNDFacebookAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213E6CAE54C267FD29C5E6 /* TNDFacebookAPI.m */; };
+		BE213E4268F483B96D8B4ED8 /* TNDMainListUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213D1C4AF39F702EF795F3 /* TNDMainListUserCell.m */; };
+		BE213F79159AACE84ED8BF62 /* TNDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BE213FF9AE0CC35D81B4BF72 /* TNDUser.m */; };
+		CABBA1C3EC884369B63EA019 /* Pods_Tinderella.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003DF411EFBE68E82264C215 /* Pods_Tinderella.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE21323A87D1411E385C7335 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE21348252003E34BD00D030 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE21342A4713C1F4C4DEBE63;
+			remoteInfo = Tinderella;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		003DF411EFBE68E82264C215 /* Pods_Tinderella.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tinderella.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		584567871EACFE9700C31D26 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		6D3A5E8CF5FAFAA4CA071491 /* Pods-TinderellaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderellaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TinderellaTests/Pods-TinderellaTests.release.xcconfig"; sourceTree = "<group>"; };
+		929B2FAFF90400345C9E7928 /* Pods-Tinderella.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinderella.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tinderella/Pods-Tinderella.release.xcconfig"; sourceTree = "<group>"; };
+		9D82A5A78162AE95FE5671DD /* Pods-Tinderella.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tinderella.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tinderella/Pods-Tinderella.debug.xcconfig"; sourceTree = "<group>"; };
+		A361BF8ABAC4F0C10AD2256D /* Pods-TinderellaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TinderellaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TinderellaTests/Pods-TinderellaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A71DD89F52EBBD9FBC807EC7 /* Pods_TinderellaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TinderellaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2130D6C703206694590BC9 /* TNDFacebookToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDFacebookToken.m; sourceTree = "<group>"; };
+		BE2130FC99958FFA12FE75BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE213184E32779E3EA3AEFE0 /* TNDMainListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDMainListController.m; sourceTree = "<group>"; };
+		BE2131A4F974B5B2E7662858 /* TNDPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDPromise.h; sourceTree = "<group>"; };
+		BE2132236A5C3309447088DF /* TinderellaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinderellaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE213234EA11CAE4FBCD09E7 /* TNDTinderAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDTinderAPI.m; sourceTree = "<group>"; };
+		BE2132998DD39161280DB0B0 /* TNDFacebookAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDFacebookAuthController.h; sourceTree = "<group>"; };
+		BE213364BF3ACFAE56E62624 /* NSError+TNDError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+TNDError.h"; sourceTree = "<group>"; };
+		BE2133B47283308605105E42 /* Tinderella.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tinderella.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE2134C32FED408270B54E3C /* TNDFacebookToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDFacebookToken.h; sourceTree = "<group>"; };
+		BE21357D926FB06E2C1AEC8D /* TNDDefferedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDDefferedImage.h; sourceTree = "<group>"; };
+		BE2135C461572B6E859005A4 /* TNDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNDAppDelegate.m; sourceTree = "<group>"; };
+		BE2135CDB80C0C258D672D67 /* TNDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDUser.h; sourceTree = "<group>"; };
+		BE2135D0A4B193CC050784C6 /* TNDMainListUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDMainListUserCell.h; sourceTree = "<group>"; };
+		BE21369030220AF8C073C758 /* TNDDefferedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDDefferedImage.m; sourceTree = "<group>"; };
+		BE2136A528B83ADC1606044E /* TNDFacebookAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDFacebookAuthController.m; sourceTree = "<group>"; };
+		BE2138CBD1531968B40E1D52 /* TNDMainListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDMainListController.h; sourceTree = "<group>"; };
+		BE213915B93484F210D3A62C /* TNDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDController.h; sourceTree = "<group>"; };
+		BE2139402FF5FF4F356CA602 /* TNDImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDImage.h; sourceTree = "<group>"; };
+		BE21396A700FB8D0055F2283 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE213981D4278A208B7B46B1 /* TNDDefferedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDDefferedImageView.m; sourceTree = "<group>"; };
+		BE213A2525C3AC3C1A98843A /* TNDTinderAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDTinderAPI.h; sourceTree = "<group>"; };
+		BE213AE0C010B4939ED00D2D /* TNDImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDImage.m; sourceTree = "<group>"; };
+		BE213BD4B39DB69F8714F307 /* TNDMainListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDMainListView.m; sourceTree = "<group>"; };
+		BE213C2D78C455C5670EB831 /* TNDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDController.m; sourceTree = "<group>"; };
+		BE213C349ECC01FC3D0D94CB /* TNDTinderUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDTinderUser.m; sourceTree = "<group>"; };
+		BE213C5DC630962B01C27887 /* NSError+TNDError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+TNDError.m"; sourceTree = "<group>"; };
+		BE213D1C4AF39F702EF795F3 /* TNDMainListUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDMainListUserCell.m; sourceTree = "<group>"; };
+		BE213D6AB452319B8408862C /* TNDDefferedImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDDefferedImageView.h; sourceTree = "<group>"; };
+		BE213D6D1691154B8E5F85A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		BE213DCE6518C7E440C97AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		BE213DEA94E9805EBAE773CA /* TNDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TNDAppDelegate.h; sourceTree = "<group>"; };
+		BE213E3E54538832DEF61934 /* TNDMainListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDMainListView.h; sourceTree = "<group>"; };
+		BE213E42F3B05C557BCB3F0D /* NSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLabel.h; sourceTree = "<group>"; };
+		BE213E6CAE54C267FD29C5E6 /* TNDFacebookAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDFacebookAPI.m; sourceTree = "<group>"; };
+		BE213E88B5F75C92D3F584FA /* TinderellaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TinderellaTests.m; sourceTree = "<group>"; };
+		BE213E9F18D9B0D8BA4165BE /* TNDPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDPromise.m; sourceTree = "<group>"; };
+		BE213EAE8DFDEF26FF057E10 /* TNDTinderUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDTinderUser.h; sourceTree = "<group>"; };
+		BE213EB85CEA30733BEAA607 /* NSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLabel.m; sourceTree = "<group>"; };
+		BE213EBFFF1198419EC0902A /* TNDFacebookAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TNDFacebookAPI.h; sourceTree = "<group>"; };
+		BE213FF9AE0CC35D81B4BF72 /* TNDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TNDUser.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE2136D30C5225FF00E6980B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABBA1C3EC884369B63EA019 /* Pods_Tinderella.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE213C10D715888912EA033D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7ECC412CFCA4BF2952E2DD1C /* Pods_TinderellaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B8232E930A7ED26C03FEFA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D82A5A78162AE95FE5671DD /* Pods-Tinderella.debug.xcconfig */,
+				929B2FAFF90400345C9E7928 /* Pods-Tinderella.release.xcconfig */,
+				A361BF8ABAC4F0C10AD2256D /* Pods-TinderellaTests.debug.xcconfig */,
+				6D3A5E8CF5FAFAA4CA071491 /* Pods-TinderellaTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE21348DFFD58BFA2B624E59 /* Tinder */ = {
+			isa = PBXGroup;
+			children = (
+				BE213234EA11CAE4FBCD09E7 /* TNDTinderAPI.m */,
+				BE213A2525C3AC3C1A98843A /* TNDTinderAPI.h */,
+				BE213C349ECC01FC3D0D94CB /* TNDTinderUser.m */,
+				BE213EAE8DFDEF26FF057E10 /* TNDTinderUser.h */,
+			);
+			path = Tinder;
+			sourceTree = "<group>";
+		};
+		BE2134BC26C229562933B444 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				BE213E6CAE54C267FD29C5E6 /* TNDFacebookAPI.m */,
+				BE213EBFFF1198419EC0902A /* TNDFacebookAPI.h */,
+				BE2136A528B83ADC1606044E /* TNDFacebookAuthController.m */,
+				BE2132998DD39161280DB0B0 /* TNDFacebookAuthController.h */,
+				BE2130D6C703206694590BC9 /* TNDFacebookToken.m */,
+				BE2134C32FED408270B54E3C /* TNDFacebookToken.h */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
+		BE21362033A232EEF19FD20F /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BE213E9F18D9B0D8BA4165BE /* TNDPromise.m */,
+				BE2131A4F974B5B2E7662858 /* TNDPromise.h */,
+				BE213C5DC630962B01C27887 /* NSError+TNDError.m */,
+				BE213364BF3ACFAE56E62624 /* NSError+TNDError.h */,
+				BE213EB85CEA30733BEAA607 /* NSLabel.m */,
+				BE213E42F3B05C557BCB3F0D /* NSLabel.h */,
+				BE21369030220AF8C073C758 /* TNDDefferedImage.m */,
+				BE21357D926FB06E2C1AEC8D /* TNDDefferedImage.h */,
+				BE213981D4278A208B7B46B1 /* TNDDefferedImageView.m */,
+				BE213D6AB452319B8408862C /* TNDDefferedImageView.h */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		BE213773ACA73FD9D620586A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BE213FF9AE0CC35D81B4BF72 /* TNDUser.m */,
+				BE2135CDB80C0C258D672D67 /* TNDUser.h */,
+				BE213AE0C010B4939ED00D2D /* TNDImage.m */,
+				BE2139402FF5FF4F356CA602 /* TNDImage.h */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BE21388C3B6C7686AA437D2F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE21396A700FB8D0055F2283 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE2139650FE0D5F6173983BB = {
+			isa = PBXGroup;
+			children = (
+				BE213A6EE0E39D273BBFE2A6 /* Products */,
+				BE213DCA4941FE008EA1F8C3 /* Tinderella */,
+				BE213EB4F5F191654A41A0B3 /* TinderellaTests */,
+				9B8232E930A7ED26C03FEFA7 /* Pods */,
+				E7875D7CFE045F9CE2272B03 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BE21399A454BFADCA6BE7AD6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BE21348DFFD58BFA2B624E59 /* Tinder */,
+				BE2134BC26C229562933B444 /* Facebook */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		BE213A6EE0E39D273BBFE2A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE2133B47283308605105E42 /* Tinderella.app */,
+				BE2132236A5C3309447088DF /* TinderellaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE213AD26C07C4AF7B06312A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BE2138CBD1531968B40E1D52 /* TNDMainListController.h */,
+				BE213184E32779E3EA3AEFE0 /* TNDMainListController.m */,
+				BE213E3E54538832DEF61934 /* TNDMainListView.h */,
+				BE213BD4B39DB69F8714F307 /* TNDMainListView.m */,
+				BE213C17B6EDADCB5C081969 /* Cell */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BE213C17B6EDADCB5C081969 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BE2135D0A4B193CC050784C6 /* TNDMainListUserCell.h */,
+				BE213D1C4AF39F702EF795F3 /* TNDMainListUserCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BE213DCA4941FE008EA1F8C3 /* Tinderella */ = {
+			isa = PBXGroup;
+			children = (
+				BE213D6D1691154B8E5F85A4 /* Info.plist */,
+				BE2130FC99958FFA12FE75BD /* Assets.xcassets */,
+				BE213DEA94E9805EBAE773CA /* TNDAppDelegate.h */,
+				BE2135C461572B6E859005A4 /* TNDAppDelegate.m */,
+				584567871EACFE9700C31D26 /* MainMenu.xib */,
+				BE21388C3B6C7686AA437D2F /* Supporting Files */,
+				BE213EACEA1F977385CB493B /* Screens */,
+				BE21399A454BFADCA6BE7AD6 /* API */,
+				BE21362033A232EEF19FD20F /* Other */,
+				BE213773ACA73FD9D620586A /* Data */,
+			);
+			path = Tinderella;
+			sourceTree = "<group>";
+		};
+		BE213EACEA1F977385CB493B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BE213C2D78C455C5670EB831 /* TNDController.m */,
+				BE213915B93484F210D3A62C /* TNDController.h */,
+				BE213AD26C07C4AF7B06312A /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BE213EB4F5F191654A41A0B3 /* TinderellaTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE213DCE6518C7E440C97AB3 /* Info.plist */,
+				BE213E88B5F75C92D3F584FA /* TinderellaTests.m */,
+			);
+			path = TinderellaTests;
+			sourceTree = "<group>";
+		};
+		E7875D7CFE045F9CE2272B03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				003DF411EFBE68E82264C215 /* Pods_Tinderella.framework */,
+				A71DD89F52EBBD9FBC807EC7 /* Pods_TinderellaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE21342A4713C1F4C4DEBE63 /* Tinderella */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE213FF202FE9EF7376BBC52 /* Build configuration list for PBXNativeTarget "Tinderella" */;
+			buildPhases = (
+				8597B5F5F810EF029D5B8C46 /* [CP] Check Pods Manifest.lock */,
+				BE213B2B5865BEBF65E61AE4 /* Sources */,
+				BE2136D30C5225FF00E6980B /* Frameworks */,
+				BE2134E99357734ED75A4103 /* Resources */,
+				0E375E4F6B75AED9031B513C /* [CP] Embed Pods Frameworks */,
+				6E23F71BA1304A4FB2235FAD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tinderella;
+			productName = Tinderella;
+			productReference = BE2133B47283308605105E42 /* Tinderella.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE213923AE3A8D791D0F90E0 /* TinderellaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE21326EA6B0F0E5C75775AA /* Build configuration list for PBXNativeTarget "TinderellaTests" */;
+			buildPhases = (
+				7F55FEA7B39A61772BC85C3E /* [CP] Check Pods Manifest.lock */,
+				BE2139A6BAB44E5B96904FB0 /* Sources */,
+				BE213C10D715888912EA033D /* Frameworks */,
+				BE213301B339E7DAA87C0E62 /* Resources */,
+				BD03B4530CBDAD8A7F6AAF24 /* [CP] Embed Pods Frameworks */,
+				3F8B80066BCD0362C4F01EED /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE21388AFA9D78B96716A0C1 /* PBXTargetDependency */,
+			);
+			name = TinderellaTests;
+			productName = TinderellaTests;
+			productReference = BE2132236A5C3309447088DF /* TinderellaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE21348252003E34BD00D030 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = ASPCartman;
+			};
+			buildConfigurationList = BE213779865514EC8356DA07 /* Build configuration list for PBXProject "Tinderella" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BE2139650FE0D5F6173983BB;
+			productRefGroup = BE213A6EE0E39D273BBFE2A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE21342A4713C1F4C4DEBE63 /* Tinderella */,
+				BE213923AE3A8D791D0F90E0 /* TinderellaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE213301B339E7DAA87C0E62 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE2134E99357734ED75A4103 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE213BB7EAFB2653D936024F /* Assets.xcassets in Resources */,
+				584567881EACFE9700C31D26 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E375E4F6B75AED9031B513C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tinderella/Pods-Tinderella-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F8B80066BCD0362C4F01EED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TinderellaTests/Pods-TinderellaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E23F71BA1304A4FB2235FAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tinderella/Pods-Tinderella-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F55FEA7B39A61772BC85C3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8597B5F5F810EF029D5B8C46 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BD03B4530CBDAD8A7F6AAF24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TinderellaTests/Pods-TinderellaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE2139A6BAB44E5B96904FB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE213270E3781D89B443BDCA /* TinderellaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE213B2B5865BEBF65E61AE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE21376689A3F8A5EB92391A /* TNDAppDelegate.m in Sources */,
+				BE2131FC14DCAC8DF00AE5C6 /* main.m in Sources */,
+				BE213A146E862BE984BC47CA /* TNDTinderAPI.m in Sources */,
+				BE213467A0C46B4148000307 /* TNDPromise.m in Sources */,
+				BE213DEE4EFCD81190CCAE4E /* TNDFacebookAPI.m in Sources */,
+				BE213DDF382506F3729C9C3F /* TNDFacebookAuthController.m in Sources */,
+				BE2131CF5E024B7E7B66B8A8 /* TNDController.m in Sources */,
+				BE213A45A6EA94CE0A56B6F1 /* TNDFacebookToken.m in Sources */,
+				BE2132842E8D7B3859E6DA0B /* NSError+TNDError.m in Sources */,
+				BE213F79159AACE84ED8BF62 /* TNDUser.m in Sources */,
+				BE213B3A3BCD2574119EC8E0 /* TNDTinderUser.m in Sources */,
+				BE213CD40EDC1AE4F081557A /* TNDImage.m in Sources */,
+				BE213688F825816D524478E4 /* TNDMainListController.m in Sources */,
+				BE213048C0E4B9C26323E49F /* TNDMainListView.m in Sources */,
+				BE213E4268F483B96D8B4ED8 /* TNDMainListUserCell.m in Sources */,
+				BE2131D38CCFC93827DDF39F /* NSLabel.m in Sources */,
+				BE213228110FA2713E83F6EF /* TNDDefferedImage.m in Sources */,
+				BE213DE2D5FD9DBB31371366 /* TNDDefferedImageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE21388AFA9D78B96716A0C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE21342A4713C1F4C4DEBE63 /* Tinderella */;
+			targetProxy = BE21323A87D1411E385C7335 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BE2132376EC4FBC5DF57F54B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+					"objc_subclassing_restricted=",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BE2134A796793E33AD39E23B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"objc_subclassing_restricted=",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BE2136CD87859104128FD4D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D3A5E8CF5FAFAA4CA071491 /* Pods-TinderellaTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tinderella.app/Contents/MacOS/Tinderella";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TinderellaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aspcartman.TinderellaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+		BE213A09349966B645E3AE6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 929B2FAFF90400345C9E7928 /* Pods-Tinderella.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tinderella/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aspcartman.Tinderella;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BE213A8F7B8FAAC555D72290 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A361BF8ABAC4F0C10AD2256D /* Pods-TinderellaTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Tinderella.app/Contents/MacOS/Tinderella";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TinderellaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aspcartman.TinderellaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		BE213CE00D342ADAE3024B12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D82A5A78162AE95FE5671DD /* Pods-Tinderella.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tinderella/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aspcartman.Tinderella;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE21326EA6B0F0E5C75775AA /* Build configuration list for PBXNativeTarget "TinderellaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE213A8F7B8FAAC555D72290 /* Debug */,
+				BE2136CD87859104128FD4D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE213779865514EC8356DA07 /* Build configuration list for PBXProject "Tinderella" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE2132376EC4FBC5DF57F54B /* Debug */,
+				BE2134A796793E33AD39E23B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE213FF202FE9EF7376BBC52 /* Build configuration list for PBXNativeTarget "Tinderella" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE213CE00D342ADAE3024B12 /* Debug */,
+				BE213A09349966B645E3AE6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE21348252003E34BD00D030 /* Project object */;
+}
